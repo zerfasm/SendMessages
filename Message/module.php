@@ -28,25 +28,6 @@ class Message extends IPSModule
         parent::ApplyChanges();
     }
 
-    /**
-     * This function will be available automatically after the module is imported with the module control.
-     * Using the custom prefix this function will be callable from PHP and JSON-RPC through:.
-     *
-     * SCHB_Update($id);
-     */
-    public function Update()
-    {
-       
-      }
-
-    /**
-     * This function will be available automatically after the module is imported with the module control.
-     * Using the custom prefix this function will be callable from PHP and JSON-RPC through:.
-     *
-     * SCHB_Duration($id, $duration);
-     *
-     * @param int $duration Wartezeit einstellen.
-     */
     public function Duration(int $duration)
     {
         IPS_SetProperty($this->InstanceID, 'UpdateTimer', $duration);
