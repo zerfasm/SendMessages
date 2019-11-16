@@ -52,7 +52,14 @@
       "items": [           
 	{"type": "CheckBox", "name": "CheckLogger", "caption": "Output by Logger?"}
       ]
-    }	  
+    },
+    
+    {"type": "ExpansionPanel", "caption": "Window",
+      "items": [           
+	{"type": "SelectVariable", "name": "Window", "caption": "Window:"}
+      ]
+    }
+	  
   ],
   "actions": [
     {"type": "Label", "caption": "Message!" },
