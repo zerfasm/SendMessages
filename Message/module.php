@@ -77,14 +77,24 @@ class SendMessages extends IPSModule
 			If ($ausloeser == true) {
 				EchoRemote_SetVolume($AID, $AV);
 				EchoRemote_TextToSpeech($AID, $text2);
-			} else
-			{
+			} else {
 				EchoRemote_SetVolume($AID, $AV);
 				EchoRemote_TextToSpeech($AID, $text3);
 			}
 		}
-	} else
-	{
+		
+		//Pushover
+		$push = $this->ReadPropertyBoolean('CheckPushover');
+		$PID = $this->ReadPropertyString('PushoverID');    
+		if ($push == true){
+			If ($ausloeser == true) {
+				UBPO_SendPushoverNotification($PID, $title2, $text2);
+			} else {
+				UBPO_SendPushoverNotification($PID, $title2, $text3);
+			}
+		}
+		
+	} else {
 		$title = $this->ReadPropertyString('Title');
 		$text = $this->ReadPropertyString('Text');
 
