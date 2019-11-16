@@ -30,7 +30,7 @@
 	"Create variable AW-Value?": "Soll die Variable AW-Wert angelegt werden?",  
 	"Create variable ventilate?": "Soll die Variable Gelüftet angelegt werden?",     
         "Calculate values!": "Werte berechnen!",
-        "CALCULATE": "BERECHNEN"
+        "CALCULATE": "BERECHNEN",
 	    
 	"Output by Pushover?": "Soll die Ausgabe über Pushover erfolgen?",    
 	"Output by Telegram?": "Soll die Ausgabe über Telegram erfolgen?",  
