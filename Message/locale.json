@@ -1,7 +1,7 @@
 {
   "translations": {
     "de": { 
-	"Window:": "Fenster:",
+	"Window": "Fenster",
 	"Text Window Open:": "Text Fenster offen:",
 	"Text Window Close:": "Text Fenster geschlossen:",    
 	"Title:": "Titel:", 
