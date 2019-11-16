@@ -48,7 +48,18 @@ class SendMessages extends IPSModule
 
     public function Update()
     {
-      
+     	$title = $this->ReadPropertyString('Title');
+     	$text = $this->ReadPropertyString('Text');
+	
+	//Alexa    
+	$tts = $this->ReadPropertyBoolean('CheckAlexa');
+	$AID = $this->ReadPropertyString('AlexaID');   
+	$AV = $this->ReadPropertyInteger('AlexaVolume'); 
+	
+	//TTS Alexa Echo Remote Modul   
+        if ($tts == true){
+           	EchoRemote_SetVolume($AID, $AV);
+		EchoRemote_TextToSpeech($AID, $text);}
     }
 
     public function Duration(int $duration)
