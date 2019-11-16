@@ -1,6 +1,6 @@
 {
   "elements": [
-    {"type": "ExpansionPanel", "caption": "Ventilate",
+    {"type": "ExpansionPanel", "caption": "Einstellungen",
       "items": [
 	{"type": "CheckBox", "name": "TTSAlexa", "caption": "Use TTS?" },
 	{"type": "ValidationTextBox", "name": "NameRoom", "caption": "Name Room:" },
@@ -13,11 +13,9 @@
 	{"type": "CheckBox", "name": "CheckPushNotification", "caption": "Output by Push Notification?"},      
 	{"type": "CheckBox", "name": "CheckAudioNotification", "caption": "Output by Audio Notification ?"},
 	{"type": "CheckBox", "name": "CheckEnigma", "caption": "Output by Enigma?"},      
-	{"type": "CheckBox", "name": "CheckLogger", "caption": "Output by Logger?"},
+	{"type": "CheckBox", "name": "CheckLogger", "caption": "Output by Logger?"}
       ]
     }
-  ],
-  "actions": [
   ]
 }
 
