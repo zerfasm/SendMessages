@@ -1,29 +1,58 @@
 {
   "elements": [
-    {"type": "ExpansionPanel", "caption": "Einstellungen",
+    {"type": "ExpansionPanel", "caption": "Benachrichtigungstext",
       "items": [
 	{"type": "ValidationTextBox", "name": "Title", "caption": "Titel:" },
 	{"type": "ValidationTextBox", "name": "Text", "caption": "Text:" }, 
+      ]
+    },
+	  
+    {"type": "ExpansionPanel", "caption": "Alexa",
+      "items": [     
+	{"type": "CheckBox", "name": "CheckAlexa", "caption": "Output by Alexa?"},
 	      
-	{"type": "CheckBox", "name": "CheckAlexa", "caption": "Output by Alexa?"},     
 	{"type": "ValidationTextBox", "name": "AlexaID", "caption": "ID Alexa:" }, 
 	{"type": "ValidationTextBox", "name": "AlexaVolume", "caption": "Volume Alexa:" }, 
-	      
+      ]
+    }, 
+	  
+    {"type": "ExpansionPanel", "caption": "Pushover",
+      "items": [     
 	{"type": "CheckBox", "name": "CheckPushover", "caption": "Output by Pushover?"},
+	      
 	{"type": "ValidationTextBox", "name": "PushoverID", "caption": "ID Pushover:" },
-	      
+      ]
+    },
+	  
+    {"type": "ExpansionPanel", "caption": "Telegram",
+      "items": [     
 	{"type": "CheckBox", "name": "CheckTelegram", "caption": "Output by Telegram?"},
-	{"type": "ValidationTextBox", "name": "TelegramID", "caption": "ID Telegram:" },
 	      
+	{"type": "ValidationTextBox", "name": "TelegramID", "caption": "ID Telegram:" },
+      ]
+    },
+	  
+    {"type": "ExpansionPanel", "caption": "Notification",
+      "items": [     
 	{"type": "CheckBox", "name": "CheckPushNotification", "caption": "Output by Push Notification?"},      
 	{"type": "CheckBox", "name": "CheckAudioNotification", "caption": "Output by Audio Notification?"},
-	      
+      ]
+    },
+	  
+    {"type": "ExpansionPanel", "caption": "Enigma",
+      "items": [           
 	{"type": "CheckBox", "name": "CheckEnigma", "caption": "Output by Enigma?"}, 
-	{"type": "ValidationTextBox", "name": "EnigmaID", "caption": "ID Enigma:" },
 	      
+	{"type": "ValidationTextBox", "name": "EnigmaID", "caption": "ID Enigma:" },
+      ]
+    },
+	  
+    {"type": "ExpansionPanel", "caption": "Logger",
+      "items": [           
 	{"type": "CheckBox", "name": "CheckLogger", "caption": "Output by Logger?"}
       ]
-    }
+    },
+	  
   ]
 }
 
