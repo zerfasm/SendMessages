@@ -52,6 +52,8 @@ class SendMessages extends IPSModule
     {
         //Never delete this line!
         parent::ApplyChanges();
+	$triggerID = $this->ReadPropertyInteger("Ausloeser");
+	$this->RegisterMessage($triggerID, VM_UPDATE);
     }
 
     public function Update()
