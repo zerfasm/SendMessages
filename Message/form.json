@@ -7,9 +7,9 @@
       ]
     },
     
-    {"type": "ExpansionPanel", "caption": "Auslöser",
+    {"type": "ExpansionPanel", "caption": "Trigger",
       "items": [
-	{"type": "SelectVariable", "name": "Variable", "caption": "Variable:" },      
+	{"type": "SelectVariable", "name": "TriggerVariable", "caption": "Trigger variable:" },      
 	{"type": "ValidationTextBox", "name": "Title", "caption": "Title:" },
 	{"type": "ValidationTextBox", "name": "Text1", "caption": "Text1:" },
 	{"type": "ValidationTextBox", "name": "Text2", "caption": "Text2:" } 
