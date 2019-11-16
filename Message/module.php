@@ -39,11 +39,6 @@ class SendMessages extends IPSModule
 	
 	//Message IPS Logger
         $this->RegisterPropertyBoolean('CheckLogger', false);
-		
-	//Window
-        $this->RegisterPropertyInteger('Window', false); 
-	$this->RegisterPropertyString('TextWindowOpen', "");    
-	$this->RegisterPropertyString('TextWindowClose', ""); 
 	        
 	// Update trigger
         $this->RegisterTimer('UpdateTrigger', 0, "MESS_Update(\$_IPS['TARGET']);");
@@ -91,11 +86,5 @@ class SendMessages extends IPSModule
         if ($log == true){
      		IPSLogger_Not($title, $text);
 	}
-    }
-
-    public function Duration(int $duration)
-    {
-        IPS_SetProperty($this->InstanceID, 'UpdateTimer', $duration);
-        IPS_ApplyChanges($this->InstanceID);
     }
 }
