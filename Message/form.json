@@ -1,16 +1,17 @@
 {
     "elements": [    
 	{"type": "ExpansionPanel", "caption": "Messages",
-      "items": [
-        {"type": "SelectVariable", "name": "WindowValue", "caption": "Window:" },
+      	"items": [
+        	{"type": "SelectVariable", "name": "WindowValue", "caption": "Window:" },
 		{"type": "CheckBox", "name": "CreateAir", "caption": "Create variable ventilate?" },
 		{"type": "CheckBox", "name": "CheckPushover", "caption": "Output by Pushover?" },
-    	{"type": "CheckBox", "name": "CheckTelegram", "caption": "Output by Telegram?" },
+    		{"type": "CheckBox", "name": "CheckTelegram", "caption": "Output by Telegram?" },
 		{"type": "CheckBox", "name": "CheckAlexa", "caption": "Output by Alexa?" },
 		{"type": "CheckBox", "name": "CheckPushNotification", "caption": "Output by Push Notification?" },      
 		{"type": "CheckBox", "name": "CheckAudioNotification", "caption": "Output by Audio Notification ?" },
 		{"type": "CheckBox", "name": "CheckEnigma", "caption": "Output by Enigma?" },      
 		{"type": "CheckBox", "name": "CheckLogger", "caption": "Output by Logger?" } 
+		]
 		],
     "actions": [],
     "status": []
