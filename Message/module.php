@@ -12,17 +12,27 @@ class SendMessages extends IPSModule
         //Never delete this line!
         parent::Create();
               
-        // Message
-	$this->RegisterPropertyBoolean('TTSAlexa', false);
+        // Message Alexa
+	$this->RegisterPropertyBoolean('CheckAlexa', false);
         $this->RegisterPropertyString('AlexaID', "");
 	$this->RegisterPropertyInteger('AlexaVolume', 40);
-	    
+	
+	// Message Pushover   
         $this->RegisterPropertyBoolean('CheckPushover', false);
+	$this->RegisterPropertyString('PushoverID', "");
+	    
+	// Message Telegram    
         $this->RegisterPropertyBoolean('CheckTelegram', false);
-        $this->RegisterPropertyBoolean('CheckAlexa', false);
+	$this->RegisterPropertyString('TelegramID', "");
+	
+	// Message Webfront    
         $this->RegisterPropertyBoolean('CheckPushNotification', false);
         $this->RegisterPropertyBoolean('CheckAudioNotification', false);
+	
+	// Message Enigma
         $this->RegisterPropertyBoolean('CheckEnigma', false);
+	$this->RegisterPropertyString('EnigmaID', "");
+	    
         $this->RegisterPropertyBoolean('CheckLogger', false);
     }
 
