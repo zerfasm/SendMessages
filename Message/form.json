@@ -10,9 +10,9 @@
     {"type": "ExpansionPanel", "caption": "Auslöser",
       "items": [
 	{"type": "SelectVariable", "name": "Ausloeser", "caption": "Auslöser:" },      
-	{"type": "ValidationTextBox", "name": "Title2", "caption": "Title:" },
-	{"type": "ValidationTextBox", "name": "Text2", "caption": "Text1:" },
-	{"type": "ValidationTextBox", "name": "Text3", "caption": "Text2:" } 
+	{"type": "ValidationTextBox", "name": "Title2", "caption": "Title 2:" },
+	{"type": "ValidationTextBox", "name": "Text2", "caption": "Text 2:" },
+	{"type": "ValidationTextBox", "name": "Text3", "caption": "Text 3:" } 
       ]
     },
 	  
