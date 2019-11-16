@@ -1,7 +1,7 @@
 {
     "id": "{F148FED6-749F-92BC-A063-B2E889006EF1}",
     "author": "Zerfasm",
-    "name": "Message",
+    "name": "SendMessages",
     "url": "",
     "compatibility": {
         "version": "5.0"
