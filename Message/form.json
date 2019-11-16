@@ -16,7 +16,7 @@
 	{"type": "ValidationTextBox", "name": "TelegramID", "caption": "ID Telegram:" },
 	      
 	{"type": "CheckBox", "name": "CheckPushNotification", "caption": "Output by Push Notification?"},      
-	{"type": "CheckBox", "name": "CheckAudioNotification", "caption": "Output by Audio Notification ?"},
+	{"type": "CheckBox", "name": "CheckAudioNotification", "caption": "Output by Audio Notification?"},
 	      
 	{"type": "CheckBox", "name": "CheckEnigma", "caption": "Output by Enigma?"}, 
 	{"type": "ValidationTextBox", "name": "EnigmaID", "caption": "ID Enigma:" },
