@@ -55,6 +55,7 @@ class SendMessages extends IPSModule
     {
         //Never delete this line!
         parent::ApplyChanges();
+	MESS_Update($id);
     }
 
     public function Update()
