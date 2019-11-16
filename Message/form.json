@@ -12,7 +12,7 @@
 	{"type": "CheckBox", "name": "CheckEnigma", "caption": "Output by Enigma?" },      
 	{"type": "CheckBox", "name": "CheckLogger", "caption": "Output by Logger?" } 
       ]
-    }
+    },
   ],
   "actions": [
   ],
