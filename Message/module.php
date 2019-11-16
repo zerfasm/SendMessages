@@ -11,37 +11,12 @@ class SendMessages extends IPSModule
     {
         //Never delete this line!
         parent::Create();
-
-        // Outdoor variables
-        $this->RegisterPropertyInteger('TempOutdoor', 0);
-        $this->RegisterPropertyInteger('HumyOutdoor', 0);
-        $this->RegisterPropertyInteger('DewPointOutdoor', 0);
-        $this->RegisterPropertyInteger('WaterContentOutdoor', 0);
-        
-        // Indoor variables
-        $this->RegisterPropertyInteger('TempIndoor', 0);
-        $this->RegisterPropertyInteger('HumyIndoor', 0);
-        $this->RegisterPropertyFloat('TempDiffWallIndoor', 0);
-        
-         // Window variables
-        $this->RegisterPropertyInteger('WindowValue', 0);
-        $this->RegisterPropertyBoolean('CreateAir', false);
-        $this->RegisterPropertyInteger('DiffLimit', 5);
-        $this->RegisterPropertyBoolean('TTSAlexa', false);
+              
+        // Message
+	$this->RegisterPropertyBoolean('TTSAlexa', false);
         $this->RegisterPropertyString('AlexaID', "");
 	$this->RegisterPropertyInteger('AlexaVolume', 40);
-        $this->RegisterPropertyString('NameRoom', "");
-        
-        // Settings
-        $this->RegisterPropertyInteger('UpdateTimer', 5);
-        $this->RegisterPropertyBoolean('CreateDewPoint', false);
-        $this->RegisterPropertyBoolean('CreateWaterContent', false);
-        $this->RegisterPropertyBoolean('CreateTF70', false);
-        $this->RegisterPropertyBoolean('CreateTF80', false);
-        $this->RegisterPropertyBoolean('CreateAWValue', false);
-        $this->RegisterPropertyBoolean('CreateMould', false);
-        
-        // Message
+	    
         $this->RegisterPropertyBoolean('CheckPushover', false);
         $this->RegisterPropertyBoolean('CheckTelegram', false);
         $this->RegisterPropertyBoolean('CheckAlexa', false);
