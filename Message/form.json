@@ -3,7 +3,7 @@
     {"type": "ExpansionPanel", "caption": "Benachrichtigungstext",
       "items": [
 	{"type": "ValidationTextBox", "name": "Title", "caption": "Titel:" },
-	{"type": "ValidationTextBox", "name": "Text", "caption": "Text:" }, 
+	{"type": "ValidationTextBox", "name": "Text", "caption": "Text:" } 
       ]
     },
 	  
@@ -12,7 +12,7 @@
 	{"type": "CheckBox", "name": "CheckAlexa", "caption": "Output by Alexa?"},
 	      
 	{"type": "ValidationTextBox", "name": "AlexaID", "caption": "ID Alexa:" }, 
-	{"type": "ValidationTextBox", "name": "AlexaVolume", "caption": "Volume Alexa:" }, 
+	{"type": "ValidationTextBox", "name": "AlexaVolume", "caption": "Volume Alexa:" } 
       ]
     }, 
 	  
@@ -20,7 +20,7 @@
       "items": [     
 	{"type": "CheckBox", "name": "CheckPushover", "caption": "Output by Pushover?"},
 	      
-	{"type": "ValidationTextBox", "name": "PushoverID", "caption": "ID Pushover:" },
+	{"type": "ValidationTextBox", "name": "PushoverID", "caption": "ID Pushover:" }
       ]
     },
 	  
@@ -28,14 +28,14 @@
       "items": [     
 	{"type": "CheckBox", "name": "CheckTelegram", "caption": "Output by Telegram?"},
 	      
-	{"type": "ValidationTextBox", "name": "TelegramID", "caption": "ID Telegram:" },
+	{"type": "ValidationTextBox", "name": "TelegramID", "caption": "ID Telegram:" }
       ]
     },
 	  
     {"type": "ExpansionPanel", "caption": "Notification",
       "items": [     
 	{"type": "CheckBox", "name": "CheckPushNotification", "caption": "Output by Push Notification?"},      
-	{"type": "CheckBox", "name": "CheckAudioNotification", "caption": "Output by Audio Notification?"},
+	{"type": "CheckBox", "name": "CheckAudioNotification", "caption": "Output by Audio Notification?"}
       ]
     },
 	  
@@ -43,13 +43,13 @@
       "items": [           
 	{"type": "CheckBox", "name": "CheckEnigma", "caption": "Output by Enigma?"}, 
 	      
-	{"type": "ValidationTextBox", "name": "EnigmaID", "caption": "ID Enigma:" },
+	{"type": "ValidationTextBox", "name": "EnigmaID", "caption": "ID Enigma:" }
       ]
     },
 	  
     {"type": "ExpansionPanel", "caption": "Logger",
       "items": [           
-	{"type": "CheckBox", "name": "CheckLogger", "caption": "Output by Logger?"},
+	{"type": "CheckBox", "name": "CheckLogger", "caption": "Output by Logger?"}
       ]
     }	  
   ]
