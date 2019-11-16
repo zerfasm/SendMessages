@@ -11,7 +11,11 @@ class SendMessages extends IPSModule
     {
         //Never delete this line!
         parent::Create();
-              
+        
+	// Nachricht
+	$this->RegisterPropertyString('Title', "");
+	$this->RegisterPropertyString('Text', "");
+	    
         // Message Alexa
 	$this->RegisterPropertyBoolean('CheckAlexa', false);
         $this->RegisterPropertyString('AlexaID', "");
