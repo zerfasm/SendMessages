@@ -1,7 +1,8 @@
 {
   "translations": {
     "de": { 
-	"Title:": "Titel:", 
+	"Title:": "Titel:",
+	 "Variable:": "Auslöser:",   
 	"Message!": "Nachricht!", 
 	"Send Message!": "Nachricht verschicken!",    
 	"Volume Alexa:": "Lautstärke Alexa:",    
