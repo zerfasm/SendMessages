@@ -94,6 +94,29 @@ class SendMessages extends IPSModule
 			}
 		}
 		
+		//Telegram
+		$tele = $this->ReadPropertyBoolean('CheckTelegram');
+		$TID = $this->ReadPropertyString('TelegramID');    
+		if ($tele == true){
+			If ($ausloeser == true) {
+				Telegram_SendTextToAll($TID, $text2);
+			} else {
+				Telegram_SendTextToAll($TID, $text3);
+			}
+		}
+		
+		//IPS Logger
+		IPSUtils_Include ("IPSLogger.inc.php", "IPSLibrary::app::core::IPSLogger");
+
+		$log = $this->ReadPropertyBoolean('CheckLogger');
+		if ($log == true){
+			If ($ausloeser == true) {
+				IPSLogger_Not($title2, $text2);;
+			} else {
+				IPSLogger_Not($title2, $text3);
+			}
+		}
+		
 	} else {
 		$title = $this->ReadPropertyString('Title');
 		$text = $this->ReadPropertyString('Text');
