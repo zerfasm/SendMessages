@@ -1,10 +1,8 @@
 {
   "translations": {
     "de": {   
-	"Name Room": "Name Raum", 
-	"Use TTS?": "Ausgabe über TTS", 
+	"Title": "Titel", 
 	"Volume Alexa:": "Lautstärke Alexa:",    
-	    
 	"Output by Pushover?": "Soll die Ausgabe über Pushover erfolgen?",    
 	"Output by Telegram?": "Soll die Ausgabe über Telegram erfolgen?",  
 	"Output by Alexa?": "Soll die Ausgabe über Alexa erfolgen?",  
