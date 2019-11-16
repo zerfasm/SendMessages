@@ -54,15 +54,20 @@ class SendMessages extends IPSModule
      	$title = $this->ReadPropertyString('Title');
      	$text = $this->ReadPropertyString('Text');
 	
-	//Alexa    
+	//TTS Alexa Echo Remote Modul    
 	$tts = $this->ReadPropertyBoolean('CheckAlexa');
 	$AID = $this->ReadPropertyString('AlexaID');   
 	$AV = $this->ReadPropertyInteger('AlexaVolume'); 
 	
-	//TTS Alexa Echo Remote Modul   
         if ($tts == true){
            	EchoRemote_SetVolume($AID, $AV);
 		EchoRemote_TextToSpeech($AID, $text);
+	}
+	    
+	//IPS Logger
+	$log = $this->ReadPropertyBoolean('CheckLogger');
+        if ($log == true){
+     		IPSLogger_Not($title, $text);
 	}
     }
 
