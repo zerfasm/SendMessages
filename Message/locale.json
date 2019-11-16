@@ -2,6 +2,8 @@
   "translations": {
     "de": {   
 	"Title": "Titel", 
+	"Message!": "Nachricht!", 
+	"Send Message!": "Nachricht verschicken!",    
 	"Volume Alexa:": "Lautstärke Alexa:",    
 	"Output by Pushover?": "Soll die Ausgabe über Pushover erfolgen?",    
 	"Output by Telegram?": "Soll die Ausgabe über Telegram erfolgen?",  
