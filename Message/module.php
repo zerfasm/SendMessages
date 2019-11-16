@@ -42,9 +42,9 @@ class SendMessages extends IPSModule
 		
 	//Window
         $this->RegisterPropertyInteger('Window', false); 
-	$this->RegisterPropertyString('WindowTextOpen', "");    
-	$this->RegisterPropertyString('WindowTextClose', ""); 
-	    
+	$this->RegisterPropertyString('TextWindowOpen', "");    
+	$this->RegisterPropertyString('TextWindowClose', ""); 
+	        
 	// Update trigger
         $this->RegisterTimer('UpdateTrigger', 0, "MESS_Update(\$_IPS['TARGET']);");
     }
