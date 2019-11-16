@@ -65,6 +65,8 @@ class SendMessages extends IPSModule
 	}
 	    
 	//IPS Logger
+	IPSUtils_Include ("IPSLogger.inc.php", "IPSLibrary::app::core::IPSLogger");
+	    
 	$log = $this->ReadPropertyBoolean('CheckLogger');
         if ($log == true){
      		IPSLogger_Not($title, $text);
