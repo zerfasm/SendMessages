@@ -32,13 +32,19 @@ class Message extends IPSModule
         $this->RegisterPropertyInteger('UpdateTimer', 5);
         $this->RegisterPropertyBoolean('CreateDewPoint', false);
         $this->RegisterPropertyBoolean('CreateWaterContent', false);
-        $this->RegisterPropertyBoolean('CreateTF70', false);
-        $this->RegisterPropertyBoolean('CreateTF80', false);
+        $this->RegisterPropertyBoolean('CheckPushover', false);
+        $this->RegisterPropertyBoolean('CheckTelegram', false);
+        $this->RegisterPropertyBoolean('CheckAlexa', false);
+        $this->RegisterPropertyBoolean('CheckPushNotification', false);
+        $this->RegisterPropertyBoolean('CheckAudioNotification', false);
+        $this->RegisterPropertyBoolean('CheckEnigma', false);
+        $this->RegisterPropertyBoolean('CheckLogger', false);
         $this->RegisterPropertyBoolean('CreateAWValue', false);
         $this->RegisterPropertyBoolean('CreateMould', false);
+
         
         // Update trigger
-        $this->RegisterTimer('UpdateTrigger', 0, "SCHB_Update(\$_IPS['TARGET']);");
+        $this->RegisterTimer('UpdateTrigger', 0, "MESS_Update(\$_IPS['TARGET']);");
     }
 
     public function ApplyChanges()
@@ -49,47 +55,47 @@ class Message extends IPSModule
         // Update Trigger Timer
         $this->SetTimerInterval('UpdateTrigger', 1000 * 60 * $this->ReadPropertyInteger('UpdateTimer'));
 
-        // Profile "SCHB.AirOrNot"
+        // Profile "MESS.AirOrNot"
         $association = [
             [0, 'Nicht Lüften!', 'Window-0', 0x00FF00],
             [1, 'Lüften!', 'Window-100', 0xFF0000],
         ];
-        $this->RegisterProfile(vtBoolean, 'SCHB.AirOrNot', 'Window', '', '', 0, 0, 0, 0, $association);
+        $this->RegisterProfile(vtBoolean, 'MESS.AirOrNot', 'Window', '', '', 0, 0, 0, 0, $association);
 
-        // Profile "SCHB.WaterContent"
+        // Profile "MESS.WaterContent"
         $association = [
             [0, '%0.2f', '', ''],
         ];
-        $this->RegisterProfile(vtFloat, 'SCHB.WaterContent', 'Drops', '', ' g/m³', 0, 0, 0, 0, $association);
+        $this->RegisterProfile(vtFloat, 'MESS.WaterContent', 'Drops', '', ' g/m³', 0, 0, 0, 0, $association);
         
-         // Profile "SCHB.Schimmelgefahr"
+         // Profile "MESS.Schimmelgefahr"
         $association = [
             [0, 'Keine Gefahr', '', 0x00FF00],
             [1, 'Gefahr', '', 0xffa500],
             [2, 'Schimmel', '', 0xFF0000],
         ];
-        $this->RegisterProfile(vtInteger, 'SCHB.Schimmelgefahr', 'Information', '', '', 0, 0, 0, 0, $association);
+        $this->RegisterProfile(vtInteger, 'MESS.Schimmelgefahr', 'Information', '', '', 0, 0, 0, 0, $association);
 
-        // Profile "SCHB.Difference"
+        // Profile "MESS.Difference"
         $association = [
             [-500, '%0.2f %%', 'Window-0', 0x00FF00],
             [0, '%0.2f %%', 'Window-0', 0x00FF00],
             [0.01, '+%0.2f %%', 'Window-100', 0xffa500],
             [10, '+%0.2f %%', 'Window-100', 0xFF0000],
         ];
-        $this->RegisterProfile(vtFloat, 'SCHB.Difference', 'Window', '', '', 0, 0, 0, 2, $association);
+        $this->RegisterProfile(vtFloat, 'MESS.Difference', 'Window', '', '', 0, 0, 0, 2, $association);
         
-        // Profile "SCHB.Ventilate"
+        // Profile "MESS.Ventilate"
         $association = [
             [0, 'Nicht gelüftet', 'Window-0', 0xFF0000],
             [1, 'Gelüftet', 'Window-100', 0x00FF00],
         ];
-        $this->RegisterProfile(vtInteger, 'SCHB.Ventilate', 'Window', '', '', 0, 0, 0, 0, $association);
+        $this->RegisterProfile(vtInteger, 'MESS.Ventilate', 'Window', '', '', 0, 0, 0, 0, $association);
         
         // Ergebnis & Hinweis & Differenz
-        $this->MaintainVariable('Hint', 'Hinweis', vtBoolean, 'SCHB.AirOrNot', 1, true);
-        $this->MaintainVariable('Result', 'Ergebnis', vtString, 'SCHB.Ergebnis', 2, true);
-        $this->MaintainVariable('Difference', 'Differenz', vtFloat, 'SCHB.Difference', 3, true);
+        $this->MaintainVariable('Hint', 'Hinweis', vtBoolean, 'MESS.AirOrNot', 1, true);
+        $this->MaintainVariable('Result', 'Ergebnis', vtString, 'MESS.Ergebnis', 2, true);
+        $this->MaintainVariable('Difference', 'Differenz', vtFloat, 'MESS.Difference', 3, true);
         
         // Taupunkt
         $create = $this->ReadPropertyBoolean('CreateDewPoint');
@@ -97,7 +103,7 @@ class Message extends IPSModule
 
         // Wassergehalt (WaterContent)
         $create = $this->ReadPropertyBoolean('CreateWaterContent');
-        $this->MaintainVariable('WaterContentIndoor', 'Wassergehalt Innen', vtFloat, 'SCHB.WaterContent', 7, $create);
+        $this->MaintainVariable('WaterContentIndoor', 'Wassergehalt Innen', vtFloat, 'MESS.WaterContent', 7, $create);
         
         // TF-70
         $create = $this->ReadPropertyBoolean('CreateTF70');
@@ -113,11 +119,11 @@ class Message extends IPSModule
         
         //Schimmelgefahr
         $create = $this->ReadPropertyBoolean('CreateMould');
-        $this->MaintainVariable('Mould', 'Schimmelgefahr', vtInteger, 'SCHB.Schimmelgefahr', 11, $create); 
+        $this->MaintainVariable('Mould', 'Schimmelgefahr', vtInteger, 'MESS.Schimmelgefahr', 11, $create); 
         
         //Gelüftet
         $create = $this->ReadPropertyBoolean('CreateAir');
-        $this->MaintainVariable('Ventilate', 'Gelüftet', vtInteger, 'SCHB.Ventilate', 12, $create); 
+        $this->MaintainVariable('Ventilate', 'Gelüftet', vtInteger, 'MESS.Ventilate', 12, $create); 
     }
 
     /**
