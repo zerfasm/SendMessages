@@ -3,8 +3,7 @@
     {"type": "ExpansionPanel", "caption": "Benachrichtigungstext",
       "items": [
 	{"type": "ValidationTextBox", "name": "Title", "caption": "Title:" },
-	{"type": "ValidationTextBox", "name": "Text1", "caption": "Text1:" },
-	{"type": "ValidationTextBox", "name": "Text2", "caption": "Text2:" },      
+	{"type": "ValidationTextBox", "name": "Text", "caption": "Text:" }     
       ]
     },
 	  
@@ -56,7 +55,9 @@
     
     {"type": "ExpansionPanel", "caption": "Window",
       "items": [           
-	{"type": "SelectVariable", "name": "Window", "caption": "Window:"}
+	{"type": "SelectVariable", "name": "Window", "caption": "Window:"},
+	{"type": "ValidationTextBox", "name": "TextWindowOpen", "caption": "Text Window Open:" },
+	{"type": "ValidationTextBox", "name": "TextWindowClose", "caption": "Text Window Close:" }      
       ]
     }
 	  
