@@ -59,7 +59,8 @@ class SendMessages extends IPSModule
 	//TTS Alexa Echo Remote Modul   
         if ($tts == true){
            	EchoRemote_SetVolume($AID, $AV);
-		EchoRemote_TextToSpeech($AID, $text);}
+		EchoRemote_TextToSpeech($AID, $text);
+	}
     }
 
     public function Duration(int $duration)
