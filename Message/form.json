@@ -55,7 +55,6 @@
   ],
   "actions": [
     {"type": "Label", "caption": "Message!" },
-    {"type": "Button", "caption": "Send Message", "onClick": "MESS_Update($id);" }
+    {"type": "Button", "caption": "Send Message!", "onClick": "MESS_Update($id);" }
   ]	
 }
-
