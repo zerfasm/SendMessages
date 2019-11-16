@@ -60,7 +60,7 @@ class SendMessages extends IPSModule
     public function Update()
     {
 	//Auslöser
-	$ausloeser = $this->ReadPropertyInteger('Ausloes');
+	$ausloeser = $this->ReadPropertyInteger('Ausloeser');
         if ($ausloeser != 0) {
 		$ausloeser = GetValue($ausloeser);
 		
