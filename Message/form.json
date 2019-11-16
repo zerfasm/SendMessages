@@ -3,16 +3,14 @@
     {"type": "ExpansionPanel", "caption": "Benachrichtigungstext",
       "items": [
 	{"type": "ValidationTextBox", "name": "Title", "caption": "Title:" },
-	{"type": "ValidationTextBox", "name": "Text", "caption": "Text:" }     
+	{"type": "ValidationTextBox", "name": "Text", "caption": "First Text:" },
+	{"type": "ValidationTextBox", "name": "Text2", "caption": "Second Text:" }
       ]
     },
     
     {"type": "ExpansionPanel", "caption": "Auslöser",
       "items": [
-	{"type": "SelectVariable", "name": "Ausloeser", "caption": "Auslöser:" },      
-	{"type": "ValidationTextBox", "name": "Title2", "caption": "Title 2:" },
-	{"type": "ValidationTextBox", "name": "Text2", "caption": "Text 2:" },
-	{"type": "ValidationTextBox", "name": "Text3", "caption": "Text 3:" } 
+	{"type": "SelectVariable", "name": "Ausloeser", "caption": "Auslöser:" } 
       ]
     },
 	  
