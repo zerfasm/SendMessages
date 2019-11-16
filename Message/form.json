@@ -3,7 +3,8 @@
     {"type": "ExpansionPanel", "caption": "Benachrichtigungstext",
       "items": [
 	{"type": "ValidationTextBox", "name": "Title", "caption": "Titel:" },
-	{"type": "ValidationTextBox", "name": "Text", "caption": "Text:" } 
+	{"type": "ValidationTextBox", "name": "Text1", "caption": "Text1:" },
+	{"type": "ValidationTextBox", "name": "Text2", "caption": "Text2:" },      
       ]
     },
 	  
