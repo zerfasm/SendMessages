@@ -15,6 +15,11 @@ class SendMessages extends IPSModule
 	// Nachricht
 	$this->RegisterPropertyString('Title', "");
 	$this->RegisterPropertyString('Text', "");
+	
+	// Auslöser
+	$this->RegisterPropertyInteger('Variable', "");
+	$this->RegisterPropertyString('Text1', "");
+	$this->RegisterPropertyString('Text2', "");
 	    
         // Message Alexa
 	$this->RegisterPropertyBoolean('CheckAlexa', false);
