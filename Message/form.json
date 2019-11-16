@@ -6,6 +6,15 @@
 	{"type": "ValidationTextBox", "name": "Text", "caption": "Text:" }     
       ]
     },
+    
+    {"type": "ExpansionPanel", "caption": "Auslöser",
+      "items": [
+	{"type": "SelectVariable", "name": "Variable", "caption": "Variable:" },      
+	{"type": "ValidationTextBox", "name": "Title", "caption": "Title:" },
+	{"type": "ValidationTextBox", "name": "Text1", "caption": "Text1:" },
+	{"type": "ValidationTextBox", "name": "Text2", "caption": "Text2:" } 
+      ]
+    },
 	  
     {"type": "ExpansionPanel", "caption": "Alexa",
       "items": [     
