@@ -15,13 +15,10 @@ class SendMessages extends IPSModule
 	// Nachricht
 	$this->RegisterPropertyString('Title', "");
 	$this->RegisterPropertyString('Text', "");
-	
-	// Auslöser
-	$this->RegisterPropertyInteger('Ausloeser', 0);
-	$this->RegisterPropertyString('Title2', "");
 	$this->RegisterPropertyString('Text2', "");
-	$this->RegisterPropertyString('Text3', "");
 	    
+	// Auslöser
+	$this->RegisterPropertyInteger('Ausloeser', 0);   
 	    
         // Message Alexa
 	$this->RegisterPropertyBoolean('CheckAlexa', false);
@@ -59,14 +56,15 @@ class SendMessages extends IPSModule
 
     public function Update()
     {
-	//Auslöser
+	$title = $this->ReadPropertyString('Title');
+	$text = $this->ReadPropertyString('Text');
+	$text2 = $this->ReadPropertyString('Text2');
+	
+	//Auslöser    
 	$ausloeser = $this->ReadPropertyInteger('Ausloeser');
+	    
         if ($ausloeser != 0) {
 		$ausloeser = GetValue($ausloeser);
-		
-		$title2 = $this->ReadPropertyString('Title2');
-		$text2 = $this->ReadPropertyString('Text2');
-		$text3 = $this->ReadPropertyString('Text3');
 		
 		//TTS Alexa Echo Remote Modul    
 		$tts = $this->ReadPropertyBoolean('CheckAlexa');
@@ -76,10 +74,10 @@ class SendMessages extends IPSModule
 		if ($tts == true){
 			If ($ausloeser == true) {
 				EchoRemote_SetVolume($AID, $AV);
-				EchoRemote_TextToSpeech($AID, $text2);
+				EchoRemote_TextToSpeech($AID, $text);
 			} else {
 				EchoRemote_SetVolume($AID, $AV);
-				EchoRemote_TextToSpeech($AID, $text3);
+				EchoRemote_TextToSpeech($AID, $text2);
 			}
 		}
 		
@@ -88,9 +86,9 @@ class SendMessages extends IPSModule
 		$PID = $this->ReadPropertyString('PushoverID');    
 		if ($push == true){
 			If ($ausloeser == true) {
-				UBPO_SendPushoverNotification($PID, $title2, $text2);
+				UBPO_SendPushoverNotification($PID, $title, $text);
 			} else {
-				UBPO_SendPushoverNotification($PID, $title2, $text3);
+				UBPO_SendPushoverNotification($PID, $title, $text2);
 			}
 		}
 		
@@ -99,9 +97,9 @@ class SendMessages extends IPSModule
 		$TID = $this->ReadPropertyString('TelegramID');    
 		if ($tele == true){
 			If ($ausloeser == true) {
-				Telegram_SendTextToAll($TID, $text2);
+				Telegram_SendTextToAll($TID, $text);
 			} else {
-				Telegram_SendTextToAll($TID, $text3);
+				Telegram_SendTextToAll($TID, $text2);
 			}
 		}
 		
@@ -111,16 +109,12 @@ class SendMessages extends IPSModule
 		$log = $this->ReadPropertyBoolean('CheckLogger');
 		if ($log == true){
 			If ($ausloeser == true) {
-				IPSLogger_Not($title2, $text2);;
+				IPSLogger_Not($title2, $text);;
 			} else {
-				IPSLogger_Not($title2, $text3);
+				IPSLogger_Not($title2, $text2);
 			}
 		}
-		
 	} else {
-		$title = $this->ReadPropertyString('Title');
-		$text = $this->ReadPropertyString('Text');
-
 		//TTS Alexa Echo Remote Modul    
 		$tts = $this->ReadPropertyBoolean('CheckAlexa');
 		$AID = $this->ReadPropertyString('AlexaID');   
