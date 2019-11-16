@@ -70,7 +70,7 @@
         ]
         },
 	{"type": "CheckBox", "name": "CheckPushover", "caption": "Output by Pushover?" },
-    {"type": "CheckBox", "name": "CheckTelegram", "caption": "Output by Telegram?" },
+    	{"type": "CheckBox", "name": "CheckTelegram", "caption": "Output by Telegram?" },
 	{"type": "CheckBox", "name": "CheckAlexa", "caption": "Output by Alexa?" },
 	{"type": "CheckBox", "name": "CheckPushNotification", "caption": "Output by Push Notification?" },      
 	{"type": "CheckBox", "name": "CheckAudioNotification", "caption": "Output by Audio Notification ?" },
