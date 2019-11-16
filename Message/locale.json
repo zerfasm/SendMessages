@@ -1,13 +1,17 @@
 {
   "translations": {
     "de": {   
+	"Name Room": "Name Raum", 
+	"Use TTS?": "Ausgabe über TTS", 
+	"Volume Alexa:": "Lautstärke Alexa:",    
+	    
 	"Output by Pushover?": "Soll die Ausgabe über Pushover erfolgen?",    
 	"Output by Telegram?": "Soll die Ausgabe über Telegram erfolgen?",  
 	"Output by Alexa?": "Soll die Ausgabe über Alexa erfolgen?",  
 	"Output by Push Notification?": "Soll die Ausgabe über Push Notification erfolgen?",  
 	"Output by Audio Notification?": "Soll die Ausgabe über Audio Notification erfolgen?", 
 	"Output by Enigma?": "Soll die Ausgabe über Enigma erfolgen?",  
-	"Output by Logger?": "Soll die Ausgabe über IPS Logger erfolgen?", 	    
+	"Output by Logger?": "Soll die Ausgabe über IPS Logger erfolgen?"	    
     	}
   }
 }
