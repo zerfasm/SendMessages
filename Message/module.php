@@ -38,6 +38,9 @@ class SendMessages extends IPSModule
 	$this->RegisterPropertyString('EnigmaID', "");
 	    
         $this->RegisterPropertyBoolean('CheckLogger', false);
+	    
+	// Update trigger
+        $this->RegisterTimer('UpdateTrigger', 0, "MESS_Update(\$_IPS['TARGET']);");
     }
 
     public function ApplyChanges()
