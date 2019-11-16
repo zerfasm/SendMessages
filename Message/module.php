@@ -36,8 +36,14 @@ class SendMessages extends IPSModule
 	// Message Enigma
         $this->RegisterPropertyBoolean('CheckEnigma', false);
 	$this->RegisterPropertyString('EnigmaID', "");
-	    
+	
+	//Message IPS Logger
         $this->RegisterPropertyBoolean('CheckLogger', false);
+		
+	//Window
+        $this->RegisterPropertyInteger('Window', false); 
+	$this->RegisterPropertyString('WindowTextOpen', "");    
+	$this->RegisterPropertyString('WindowTextClose', ""); 
 	    
 	// Update trigger
         $this->RegisterTimer('UpdateTrigger', 0, "MESS_Update(\$_IPS['TARGET']);");
@@ -53,7 +59,7 @@ class SendMessages extends IPSModule
     {
      	$title = $this->ReadPropertyString('Title');
      	$text = $this->ReadPropertyString('Text');
-	
+	    
 	//TTS Alexa Echo Remote Modul    
 	$tts = $this->ReadPropertyBoolean('CheckAlexa');
 	$AID = $this->ReadPropertyString('AlexaID');   
