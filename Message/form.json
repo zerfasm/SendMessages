@@ -51,16 +51,7 @@
       "items": [           
 	{"type": "CheckBox", "name": "CheckLogger", "caption": "Output by Logger?"}
       ]
-    },
-    
-    {"type": "ExpansionPanel", "caption": "Window",
-      "items": [           
-	{"type": "SelectVariable", "name": "Window", "caption": "Window:"},
-	{"type": "ValidationTextBox", "name": "TextWindowOpen", "caption": "Text Window Open:" },
-	{"type": "ValidationTextBox", "name": "TextWindowClose", "caption": "Text Window Close:" }      
-      ]
-    }
-	  
+    }  
   ],
   "actions": [
     {"type": "Label", "caption": "Message!" },
