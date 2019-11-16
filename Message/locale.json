@@ -1,9 +1,6 @@
 {
   "translations": {
     "de": { 
-	"Window": "Fenster",
-	"Text Window Open:": "Text Fenster offen:",
-	"Text Window Close:": "Text Fenster geschlossen:",    
 	"Title:": "Titel:", 
 	"Message!": "Nachricht!", 
 	"Send Message!": "Nachricht verschicken!",    
