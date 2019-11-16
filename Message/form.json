@@ -52,6 +52,10 @@
 	{"type": "CheckBox", "name": "CheckLogger", "caption": "Output by Logger?"}
       ]
     }	  
-  ]
+  ],
+  "actions": [
+    {"type": "Label", "caption": "Message!" },
+    {"type": "Button", "caption": "Send Message", "onClick": "MESS_Update($id);" }
+  ]	
 }
 
