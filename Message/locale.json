@@ -11,7 +11,6 @@
 	"Output by Telegram?": "Soll die Ausgabe über Telegram erfolgen?",  
 	"Output by Alexa?": "Soll die Ausgabe über Alexa erfolgen?",  
 	"Output by Push Notification?": "Soll die Ausgabe über Push Notification erfolgen?",  
-	"Output by Audio Notification?": "Soll die Ausgabe über Audio Notification erfolgen?", 
 	"Output by Enigma?": "Soll die Ausgabe über Enigma erfolgen?",  
 	"Output by Logger?": "Soll die Ausgabe über IPS Logger erfolgen?"	    
     	}
