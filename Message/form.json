@@ -8,7 +8,7 @@
 	{"type": "SelectVariable", "name": "SensorID", "caption": "Auslösender Sensor:" },
 	      
 	{"type": "CheckBox", "name": "CheckAnruf", "caption": "Alarmanruf?"},
-	{"type": "SelectVariable", "name": "AnrufNr", "caption": "Alram-Nr:" },
+	{"type": "ValidationTextBox", "name": "AnrufNr", "caption": "Alarm-Nr:" },
 	{"type": "SelectInstance", "name": "VOIPID", "caption": "Instance ID VOIP:" }        
       ]
     },  
