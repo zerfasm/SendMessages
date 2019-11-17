@@ -27,20 +27,19 @@ class SendMessages extends IPSModule
 	
 	// Message Pushover   
         $this->RegisterPropertyBoolean('CheckPushover', false);
-	$this->RegisterPropertyInteger('PushoverID', "");
+	$this->RegisterPropertyInteger('PushoverID', null);
 	    
 	// Message Telegram    
         $this->RegisterPropertyBoolean('CheckTelegram', false);
-	$this->RegisterPropertyInteger('TelegramID', "");
+	$this->RegisterPropertyInteger('TelegramID', null);
 	
 	// Message Webfront    
         $this->RegisterPropertyBoolean('CheckPushNotification', false);
-        $this->RegisterPropertyBoolean('CheckAudioNotification', false);
-	$this->RegisterPropertyInteger('WebfrontID', "");
+	$this->RegisterPropertyInteger('WebfrontID', null);
 	    
 	// Message Enigma
         $this->RegisterPropertyBoolean('CheckEnigma', false);
-	$this->RegisterPropertyInteger('EnigmaID', "");
+	$this->RegisterPropertyInteger('EnigmaID', null);
 	
 	//Message IPS Logger
         $this->RegisterPropertyBoolean('CheckLogger', false);
