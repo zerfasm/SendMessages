@@ -5,7 +5,11 @@
 	{"type": "CheckBox", "name": "CheckAlarm", "caption": "Alarm Message?"},
 	      
 	{"type": "SelectVariable", "name": "Alarm", "caption": "Alarm:" },    
-	{"type": "SelectVariable", "name": "SensorID", "caption": "Auslösender Sensor:" }
+	{"type": "SelectVariable", "name": "SensorID", "caption": "Auslösender Sensor:" },
+	      
+	{"type": "CheckBox", "name": "CheckAnruf", "caption": "Alarmanruf?"},
+	{"type": "SelectVariable", "name": "AnrufNr", "caption": "Alram-Nr:" },
+	{"type": "SelectInstance", "name": "VOIPID", "caption": "Instance ID VOIP:" }        
       ]
     },  
 	  
