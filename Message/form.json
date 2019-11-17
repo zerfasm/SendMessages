@@ -1,17 +1,6 @@
 {
   "elements": [
-   {"type": "ExpansionPanel", "caption": "Alarmanlage",
-      "items": [  
-	{"type": "CheckBox", "name": "CheckAlarm", "caption": "Alarm Message?"},    
-	{"type": "SelectVariable", "name": "AlarmID", "caption": "Alarm:" },    
-	      
-	{"type": "CheckBox", "name": "CheckAnruf", "caption": "Alarmanruf?"},
-	{"type": "ValidationTextBox", "name": "AnrufNr", "caption": "Alarm-Nr:" },
-	{"type": "SelectInstance", "name": "VOIPID", "caption": "Instance ID VOIP:" }        
-      ]
-    },  
-	  
-    {"type": "ExpansionPanel", "caption": "Benachrichtigungstext",
+   {"type": "ExpansionPanel", "caption": "Benachrichtigungstext",
       "items": [
 	{"type": "ValidationTextBox", "name": "Title", "caption": "Title:" },
 	{"type": "ValidationTextBox", "name": "Text", "caption": "First Text:" },
@@ -70,6 +59,17 @@
     {"type": "ExpansionPanel", "caption": "Logger",
       "items": [           
 	{"type": "CheckBox", "name": "CheckLogger", "caption": "Output by Logger?"}
+      ]
+    },
+	  
+    {"type": "ExpansionPanel", "caption": "Alarmanlage",
+      "items": [  
+	{"type": "CheckBox", "name": "CheckAlarm", "caption": "Alarm Message?"},    
+	{"type": "SelectVariable", "name": "AlarmID", "caption": "Alarm:" },    
+	      
+	{"type": "CheckBox", "name": "CheckAnruf", "caption": "Alarmanruf?"},
+	{"type": "ValidationTextBox", "name": "AnrufNr", "caption": "Alarm-Nr:" },
+	{"type": "SelectInstance", "name": "VOIPID", "caption": "Instance ID VOIP:" }        
       ]
     }  
   ],
