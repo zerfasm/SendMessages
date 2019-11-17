@@ -153,7 +153,7 @@ class SendMessages extends IPSModule
 		$web = $this->ReadPropertyBoolean('CheckPushNotification');
 		$WID = $this->ReadPropertyInteger('WebfrontID');    
 		
-		if ($enig == true){
+		if ($web == true){
 			WFC_PushNotification($WID, $title, $text, '', 0);
 		}
 			
