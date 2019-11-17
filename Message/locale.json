@@ -2,8 +2,8 @@
   "translations": {
     "de": { 
 	"Title:": "Titel:",
-	"First Text:": "Erster Text:",
-	"Second Text:": "Zweiter Text:",	    
+	"First Text:": "Erster Text (TRUE oder 1):",
+	"Second Text:": "Zweiter Text (FALSE oder 0...):",	    
 	"Message!": "Nachricht!", 
 	"Send Message!": "Nachricht verschicken!",    
 	"Volume Alexa:": "Lautstärke Alexa:",    
