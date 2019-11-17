@@ -141,6 +141,14 @@ class SendMessages extends IPSModule
 			Telegram_SendTextToAll($TID, $text);
 		}
 		
+		//Enigma
+		$enig = $this->ReadPropertyBoolean('CheckEnigma');
+		$EID = $this->ReadPropertyString('EnigmaID');    
+		
+		if ($enig == true){
+			Enigma2BY_SendMsg($EID, $text, 1, 5);
+		}
+		
 		//IPS Logger
 		IPSUtils_Include ("IPSLogger.inc.php", "IPSLibrary::app::core::IPSLogger");
 		
