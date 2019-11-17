@@ -48,11 +48,21 @@ class SendMessages extends IPSModule
         $this->RegisterTimer('UpdateTrigger', 0, "MESS_Update(\$_IPS['TARGET']);");
     }
 
-    public function ApplyChanges()
-    {
-        //Never delete this line!
-        parent::ApplyChanges();
-    }
+        public function ApplyChanges() {
+            parent::ApplyChanges();
+            $this->Initialize();
+	    $this->SetStatus(102);
+        }
+
+	public function Initialize()
+	{
+	    $arr = $this->GetDeviceParameters();	
+	    if ($arr){
+	    	foreach($arr as $key1) {
+	    	$this->RegisterMessage($key1["InstanceID"], 10603);
+		}
+	    }	
+	}
 	
     public function Update()
     {
