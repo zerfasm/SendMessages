@@ -43,7 +43,7 @@
     {"type": "ExpansionPanel", "caption": "Notification",
       "items": [     
 	{"type": "CheckBox", "name": "CheckPushNotification", "caption": "Output by Push Notification?"},      
-	{"type": "CheckBox", "name": "CheckAudioNotification", "caption": "Output by Audio Notification?"},
+
 	{"type": "SelectInstance", "name": "WebfrontID", "caption": "ID Webfront:" }      
       ]
     },
