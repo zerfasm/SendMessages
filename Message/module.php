@@ -22,7 +22,7 @@ class SendMessages extends IPSModule
 	    
         // Message Alexa
 	$this->RegisterPropertyBoolean('CheckAlexa', false);
-        $this->RegisterPropertyString('AlexaID', null);
+        $this->RegisterPropertyInteger('AlexaID', null);
 	$this->RegisterPropertyInteger('AlexaVolume', 40);
 	
 	// Message Pushover   
