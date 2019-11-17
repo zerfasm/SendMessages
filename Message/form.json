@@ -28,7 +28,7 @@
       "items": [     
 	{"type": "CheckBox", "name": "CheckPushover", "caption": "Output by Pushover?"},
 	      
-	{"type": "ValidationTextBox", "name": "PushoverID", "caption": "ID Pushover:" }
+	{"type": "SelectInstance", "name": "PushoverID", "caption": "ID Pushover:" }
       ]
     },
 	  
@@ -36,14 +36,15 @@
       "items": [     
 	{"type": "CheckBox", "name": "CheckTelegram", "caption": "Output by Telegram?"},
 	      
-	{"type": "ValidationTextBox", "name": "TelegramID", "caption": "ID Telegram:" }
+	{"type": "SelectInstance", "name": "TelegramID", "caption": "ID Telegram:" }
       ]
     },
 	  
     {"type": "ExpansionPanel", "caption": "Notification",
       "items": [     
 	{"type": "CheckBox", "name": "CheckPushNotification", "caption": "Output by Push Notification?"},      
-	{"type": "CheckBox", "name": "CheckAudioNotification", "caption": "Output by Audio Notification?"}
+	{"type": "CheckBox", "name": "CheckAudioNotification", "caption": "Output by Audio Notification?"},
+	{"type": "SelectInstance", "name": "WebfrontID", "caption": "ID Webfront:" }      
       ]
     },
 	  
@@ -51,7 +52,7 @@
       "items": [           
 	{"type": "CheckBox", "name": "CheckEnigma", "caption": "Output by Enigma?"}, 
 	      
-	{"type": "ValidationTextBox", "name": "EnigmaID", "caption": "ID Enigma:" }
+	{"type": "SelectInstance", "name": "EnigmaID", "caption": "ID Enigma:" }
       ]
     },
 	  
