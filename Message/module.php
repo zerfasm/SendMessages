@@ -72,7 +72,7 @@ class SendMessages extends IPSModule
 		$AV = $this->ReadPropertyInteger('AlexaVolume'); 
 
 		if ($tts == true){
-			If ($ausloeser == true) {
+			If (($ausloeser == true) or ($ausloeser == 1)) {
 				EchoRemote_SetVolume($AID, $AV);
 				EchoRemote_TextToSpeech($AID, $text);
 			} else {
@@ -85,7 +85,7 @@ class SendMessages extends IPSModule
 		$push = $this->ReadPropertyBoolean('CheckPushover');
 		$PID = $this->ReadPropertyInteger('PushoverID');    
 		if ($push == true){
-			If ($ausloeser == true) {
+			If (($ausloeser == true) or ($ausloeser == 1)) {
 				UBPO_SendPushoverNotification($PID, $title, $text);
 			} else {
 				UBPO_SendPushoverNotification($PID, $title, $text2);
@@ -96,10 +96,32 @@ class SendMessages extends IPSModule
 		$tele = $this->ReadPropertyBoolean('CheckTelegram');
 		$TID = $this->ReadPropertyInteger('TelegramID');    
 		if ($tele == true){
-			If ($ausloeser == true) {
+			If (($ausloeser == true) or ($ausloeser == 1)) {
 				Telegram_SendTextToAll($TID, $text);
 			} else {
 				Telegram_SendTextToAll($TID, $text2);
+			}
+		}
+		
+		//Push Notification
+		$web = $this->ReadPropertyBoolean('CheckPushNotification');
+		$WID = $this->ReadPropertyInteger('WebfrontID');    
+		if ($web == true){
+			If (($ausloeser == true) or ($ausloeser == 1)) {
+				WFC_PushNotification($WID, $title, $text, '', 0);
+			} else {
+				WFC_PushNotification($WID, $title, $text2, '', 0);
+			}
+		}
+		
+		//Enigma
+		$enig = $this->ReadPropertyBoolean('CheckEnigma');
+		$EID = $this->ReadPropertyInteger('EnigmaID');   
+		if ($enig == true){
+			If (($ausloeser == true) or ($ausloeser == 1)) {
+				Enigma2BY_SendMsg($EID, $text, 1, 5);
+			} else {
+				Enigma2BY_SendMsg($EID, $text2, 1, 5);
 			}
 		}
 		
@@ -108,7 +130,7 @@ class SendMessages extends IPSModule
 
 		$log = $this->ReadPropertyBoolean('CheckLogger');
 		if ($log == true){
-			If ($ausloeser == true) {
+			If (($ausloeser == true) or ($ausloeser == 1)) {
 				IPSLogger_Not($title, $text);;
 			} else {
 				IPSLogger_Not($title, $text2);
@@ -141,20 +163,20 @@ class SendMessages extends IPSModule
 			Telegram_SendTextToAll($TID, $text);
 		}
 		
-		//Enigma
-		$enig = $this->ReadPropertyBoolean('CheckEnigma');
-		$EID = $this->ReadPropertyInteger('EnigmaID');    
-		
-		if ($enig == true){
-			Enigma2BY_SendMsg($EID, $text, 1, 5);
-		}
-		
 		//Webfront Push Notification
 		$web = $this->ReadPropertyBoolean('CheckPushNotification');
 		$WID = $this->ReadPropertyInteger('WebfrontID');    
 		
 		if ($web == true){
 			WFC_PushNotification($WID, $title, $text, '', 0);
+		}
+		
+		//Enigma
+		$enig = $this->ReadPropertyBoolean('CheckEnigma');
+		$EID = $this->ReadPropertyInteger('EnigmaID');    
+		
+		if ($enig == true){
+			Enigma2BY_SendMsg($EID, $text, 1, 5);
 		}
 			
 		//IPS Logger
