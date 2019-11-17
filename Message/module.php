@@ -15,7 +15,6 @@ class SendMessages extends IPSModule
 	// Alarmanlage
 	$this->RegisterPropertyBoolean('CheckAlarm', false);
 	$this->RegisterPropertyInteger('AlarmID', null);   
-	$this->RegisterPropertyInteger('SensorID', null);
 	$this->RegisterPropertyBoolean('CheckAnruf', false);
 	$this->RegisterPropertyString('AnrufNr', "");   
 	$this->RegisterPropertyInteger('VOIPID', null);      
