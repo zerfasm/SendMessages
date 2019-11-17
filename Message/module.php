@@ -150,7 +150,7 @@ class SendMessages extends IPSModule
 		}
 		
 		//Webfront Push Notification
-		$web = $this->ReadPropertyBoolean('CheckWebfront');
+		$web = $this->ReadPropertyBoolean('CheckPushNotification');
 		$WID = $this->ReadPropertyInteger('WebfrontID');    
 		
 		if ($enig == true){
