@@ -50,9 +50,8 @@ class SendMessages extends IPSModule
 
     public function ApplyChanges() 
     {
-            parent::ApplyChanges();
-            $this->Initialize();
-	    $this->SetStatus(102);
+ 	//Never delete this line!
+        parent::ApplyChanges();
     }
 	
     public function Update()
