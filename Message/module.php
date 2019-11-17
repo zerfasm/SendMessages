@@ -68,7 +68,7 @@ class SendMessages extends IPSModule
 		
 		//TTS Alexa Echo Remote Modul    
 		$tts = $this->ReadPropertyBoolean('CheckAlexa');
-		$AID = $this->ReadPropertyString('AlexaID');   
+		$AID = $this->ReadPropertyInteger('AlexaID');   
 		$AV = $this->ReadPropertyInteger('AlexaVolume'); 
 
 		if ($tts == true){
@@ -117,7 +117,7 @@ class SendMessages extends IPSModule
 	} else {
 		//TTS Alexa Echo Remote Modul    
 		$tts = $this->ReadPropertyBoolean('CheckAlexa');
-		$AID = $this->ReadPropertyString('AlexaID');   
+		$AID = $this->ReadPropertyInteger('AlexaID');   
 		$AV = $this->ReadPropertyInteger('AlexaVolume'); 
 		
 		if ($tts == true){
