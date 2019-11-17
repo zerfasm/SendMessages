@@ -27,19 +27,20 @@ class SendMessages extends IPSModule
 	
 	// Message Pushover   
         $this->RegisterPropertyBoolean('CheckPushover', false);
-	$this->RegisterPropertyString('PushoverID', "");
+	$this->RegisterPropertyInteger('PushoverID', "");
 	    
 	// Message Telegram    
         $this->RegisterPropertyBoolean('CheckTelegram', false);
-	$this->RegisterPropertyString('TelegramID', "");
+	$this->RegisterPropertyInteger('TelegramID', "");
 	
 	// Message Webfront    
         $this->RegisterPropertyBoolean('CheckPushNotification', false);
         $this->RegisterPropertyBoolean('CheckAudioNotification', false);
-	
+	$this->RegisterPropertyInteger('WebfrontID', "");
+	    
 	// Message Enigma
         $this->RegisterPropertyBoolean('CheckEnigma', false);
-	$this->RegisterPropertyString('EnigmaID', "");
+	$this->RegisterPropertyInteger('EnigmaID', "");
 	
 	//Message IPS Logger
         $this->RegisterPropertyBoolean('CheckLogger', false);
@@ -83,7 +84,7 @@ class SendMessages extends IPSModule
 		
 		//Pushover
 		$push = $this->ReadPropertyBoolean('CheckPushover');
-		$PID = $this->ReadPropertyString('PushoverID');    
+		$PID = $this->ReadPropertyInteger('PushoverID');    
 		if ($push == true){
 			If ($ausloeser == true) {
 				UBPO_SendPushoverNotification($PID, $title, $text);
@@ -94,7 +95,7 @@ class SendMessages extends IPSModule
 		
 		//Telegram
 		$tele = $this->ReadPropertyBoolean('CheckTelegram');
-		$TID = $this->ReadPropertyString('TelegramID');    
+		$TID = $this->ReadPropertyInteger('TelegramID');    
 		if ($tele == true){
 			If ($ausloeser == true) {
 				Telegram_SendTextToAll($TID, $text);
@@ -127,7 +128,7 @@ class SendMessages extends IPSModule
 		
 		//Pushover
 		$push = $this->ReadPropertyBoolean('CheckPushover');
-		$PID = $this->ReadPropertyString('PushoverID');    
+		$PID = $this->ReadPropertyInteger('PushoverID');    
 		
 		if ($push == true){
 			UBPO_SendPushoverNotification($PID, $title, $text);
@@ -135,7 +136,7 @@ class SendMessages extends IPSModule
 		
 		//Telegram
 		$tele = $this->ReadPropertyBoolean('CheckTelegram');
-		$TID = $this->ReadPropertyString('TelegramID');    
+		$TID = $this->ReadPropertyInteger('TelegramID');    
 		
 		if ($tele == true){
 			Telegram_SendTextToAll($TID, $text);
@@ -143,12 +144,20 @@ class SendMessages extends IPSModule
 		
 		//Enigma
 		$enig = $this->ReadPropertyBoolean('CheckEnigma');
-		$EID = $this->ReadPropertyString('EnigmaID');    
+		$EID = $this->ReadPropertyInteger('EnigmaID');    
 		
 		if ($enig == true){
 			Enigma2BY_SendMsg($EID, $text, 1, 5);
 		}
 		
+		//Webfront Push Notification
+		$web = $this->ReadPropertyBoolean('CheckWebfront');
+		$WID = $this->ReadPropertyInteger('WebfrontID');    
+		
+		if ($enig == true){
+			WFC_PushNotification($WID, $title, $text, '', 0);
+		}
+			
 		//IPS Logger
 		IPSUtils_Include ("IPSLogger.inc.php", "IPSLibrary::app::core::IPSLogger");
 		
