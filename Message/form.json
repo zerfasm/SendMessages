@@ -18,7 +18,7 @@
       "items": [     
 	{"type": "CheckBox", "name": "CheckAlexa", "caption": "Output by Alexa?"},
 	      
-	{"type": "ValidationTextBox", "name": "AlexaID", "caption": "ID Alexa:" },
+	{"type": "SelectInstance", "name": "AlexaID", "caption": "ID Alexa:" },
 	      
 	{"type": "ValidationTextBox", "name": "AlexaVolume", "caption": "Volume Alexa:" } 
       ]
