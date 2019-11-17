@@ -1,5 +1,12 @@
 {
   "elements": [
+   {"type": "ExpansionPanel", "caption": "Alarmanlage",
+      "items": [     
+	{"type": "SelectVariable", "name": "AusloeserAlarm", "caption": "Alarm:" }    
+	{"type": "SelectVariable", "name": "SensorID", "caption": "Auslösender Sensor:" },
+      ]
+    },  
+	  
     {"type": "ExpansionPanel", "caption": "Benachrichtigungstext",
       "items": [
 	{"type": "ValidationTextBox", "name": "Title", "caption": "Title:" },
