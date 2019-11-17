@@ -2,10 +2,8 @@
   "elements": [
    {"type": "ExpansionPanel", "caption": "Alarmanlage",
       "items": [  
-	{"type": "CheckBox", "name": "CheckAlarm", "caption": "Alarm Message?"},
-	      
+	{"type": "CheckBox", "name": "CheckAlarm", "caption": "Alarm Message?"},    
 	{"type": "SelectVariable", "name": "AlarmID", "caption": "Alarm:" },    
-	{"type": "SelectVariable", "name": "SensorID", "caption": "Auslösender Sensor:" },
 	      
 	{"type": "CheckBox", "name": "CheckAnruf", "caption": "Alarmanruf?"},
 	{"type": "ValidationTextBox", "name": "AnrufNr", "caption": "Alarm-Nr:" },
