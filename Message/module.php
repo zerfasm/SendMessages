@@ -53,16 +53,6 @@ class SendMessages extends IPSModule
         //Never delete this line!
         parent::ApplyChanges();
     }
-
-    public function Initialize()
-    {
-	$arr = $this->GetDeviceParameters();	
-	if ($arr){
-		foreach($arr as $key1) {
-		$this->RegisterMessage($key1["InstanceID"], 10603);
-		}
-	}	
-    }
 	
     public function Update()
     {
