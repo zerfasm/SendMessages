@@ -30,7 +30,8 @@ class SendMessages extends IPSModule
 	    
         // Message Alexa
 	$this->RegisterPropertyBoolean('CheckAlexa', false);
-        $this->RegisterPropertyInteger('AlexaID', null);
+        $this->RegisterPropertyInteger('AlexaID_1', null);
+	$this->RegisterPropertyInteger('AlexaID_2', null);
 	$this->RegisterPropertyInteger('AlexaVolume', 40);
 	
 	// Message Pushover   
@@ -147,12 +148,15 @@ class SendMessages extends IPSModule
 	} else {
 		//TTS Alexa Echo Remote Modul    
 		$tts = $this->ReadPropertyBoolean('CheckAlexa');
-		$AID = $this->ReadPropertyInteger('AlexaID');   
+		$AID_1 = $this->ReadPropertyInteger('AlexaID_1');   
+		$AID_2 = $this->ReadPropertyInteger('AlexaID_2');  
 		$AV = $this->ReadPropertyInteger('AlexaVolume'); 
 		
 		if ($tts == true){
-			EchoRemote_SetVolume($AID, $AV);
-			EchoRemote_TextToSpeech($AID, $text);
+			EchoRemote_SetVolume($AID_1, $AV);
+			EchoRemote_SetVolume($AID_2, $AV);
+			EchoRemote_TextToSpeech($AID_1, $text);
+			EchoRemote_TextToSpeech($AID_2, $text);
 		}
 		
 		//Pushover
