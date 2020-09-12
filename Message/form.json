@@ -16,26 +16,23 @@
 	  
     {"type": "ExpansionPanel", "caption": "Alexa",
       "items": [     
-	{"type": "CheckBox", "name": "CheckAlexa", "caption": "Output by Alexa?"},
-	      
-	{"type": "SelectInstance", "name": "AlexaID", "caption": "Instance ID Alexa:" },
-	      
+	{"type": "CheckBox", "name": "CheckAlexa", "caption": "Output by Alexa?"},  
+	{"type": "SelectInstance", "name": "AlexaID_1", "caption": "Instance ID 1 Alexa:" },
+	{"type": "SelectInstance", "name": "AlexaID_2", "caption": "Instance ID 2 Alexa:" },        
 	{"type": "ValidationTextBox", "name": "AlexaVolume", "caption": "Volume Alexa:" } 
       ]
     }, 
 	  
     {"type": "ExpansionPanel", "caption": "Pushover",
       "items": [     
-	{"type": "CheckBox", "name": "CheckPushover", "caption": "Output by Pushover?"},
-	      
+	{"type": "CheckBox", "name": "CheckPushover", "caption": "Output by Pushover?"},     
 	{"type": "SelectInstance", "name": "PushoverID", "caption": "Instance ID Pushover:" }
       ]
     },
 	  
     {"type": "ExpansionPanel", "caption": "Telegram",
       "items": [     
-	{"type": "CheckBox", "name": "CheckTelegram", "caption": "Output by Telegram?"},
-	      
+	{"type": "CheckBox", "name": "CheckTelegram", "caption": "Output by Telegram?"},    
 	{"type": "SelectInstance", "name": "TelegramID", "caption": "Instance ID Telegram:" }
       ]
     },
@@ -43,15 +40,13 @@
     {"type": "ExpansionPanel", "caption": "Notification",
       "items": [     
 	{"type": "CheckBox", "name": "CheckPushNotification", "caption": "Output by Push Notification?"},      
-
 	{"type": "SelectInstance", "name": "WebfrontID", "caption": "Instance ID Webfront:" }      
       ]
     },
 	  
     {"type": "ExpansionPanel", "caption": "Enigma",
       "items": [           
-	{"type": "CheckBox", "name": "CheckEnigma", "caption": "Output by Enigma?"}, 
-	      
+	{"type": "CheckBox", "name": "CheckEnigma", "caption": "Output by Enigma?"},    
 	{"type": "SelectInstance", "name": "EnigmaID", "caption": "Instance ID Enigma:" }
       ]
     },
@@ -66,8 +61,7 @@
       "items": [  
 	{"type": "CheckBox", "name": "CheckAlarm", "caption": "Alarm Message?"}, 
 	{"type": "SelectVariable", "name": "AlarmSensor", "caption": "Alarm Sensor:" },     
-	{"type": "SelectVariable", "name": "AlarmID", "caption": "Alarm:" },    
-	      
+	{"type": "SelectVariable", "name": "AlarmID", "caption": "Alarm:" },       
 	{"type": "CheckBox", "name": "CheckAnruf", "caption": "Alarmanruf?"},
 	{"type": "ValidationTextBox", "name": "AnrufNr", "caption": "Alarm-Nr:" },
 	{"type": "SelectInstance", "name": "VOIPID", "caption": "Instance ID VOIP:" }        
