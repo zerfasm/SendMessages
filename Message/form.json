@@ -17,8 +17,7 @@
     {"type": "ExpansionPanel", "caption": "Alexa",
       "items": [     
 	{"type": "CheckBox", "name": "CheckAlexa", "caption": "Output by Alexa?"},  
-	{"type": "SelectInstance", "name": "AlexaID_1", "caption": "Instance ID 1 Alexa:" },
-	{"type": "SelectInstance", "name": "AlexaID_2", "caption": "Instance ID 2 Alexa:" },        
+	{"type": "SelectInstance", "name": "AlexaID", "caption": "Instance ID Alexa:" },       
 	{"type": "ValidationTextBox", "name": "AlexaVolume", "caption": "Volume Alexa:" } 
       ]
     }, 
