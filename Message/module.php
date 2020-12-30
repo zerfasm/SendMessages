@@ -95,7 +95,7 @@ class SendMessages extends IPSModule
 		if ($push == true){
 			If (($ausloeser == true) or ($ausloeser == 1)) {
 				UBPO_SendPushoverNotification($PID, $title, $text);
-			} else {
+			} elseif (($ausloeser == false) or ($ausloeser == 0)) {
 				UBPO_SendPushoverNotification($PID, $title, $text2);
 			}
 		}
@@ -106,7 +106,7 @@ class SendMessages extends IPSModule
 		if ($tele == true){
 			If (($ausloeser == true) or ($ausloeser == 1)) {
 				Telegram_SendTextToAll($TID, $text);
-			} else {
+			} elseif (($ausloeser == false) or ($ausloeser == 0)) {
 				Telegram_SendTextToAll($TID, $text2);
 			}
 		}
@@ -117,7 +117,7 @@ class SendMessages extends IPSModule
 		if ($web == true){
 			If (($ausloeser == true) or ($ausloeser == 1)) {
 				WFC_PushNotification($WID, $title, $text, '', 0);
-			} else {
+			} elseif (($ausloeser == false) or ($ausloeser == 0)) {
 				WFC_PushNotification($WID, $title, $text2, '', 0);
 			}
 		}
@@ -128,7 +128,7 @@ class SendMessages extends IPSModule
 		if ($enig == true){
 			If (($ausloeser == true) or ($ausloeser == 1)) {
 				Enigma2BY_SendMsg($EID, $text, 1, 5);
-			} else {
+			} elseif (($ausloeser == false) or ($ausloeser == 0)) {
 				Enigma2BY_SendMsg($EID, $text2, 1, 5);
 			}
 		}
@@ -140,7 +140,7 @@ class SendMessages extends IPSModule
 		if ($log == true){
 			If (($ausloeser == true) or ($ausloeser == 1)) {
 				IPSLogger_Not($title, $text);;
-			} else {
+			} elseif (($ausloeser == false) or ($ausloeser == 0)) {
 				IPSLogger_Not($title, $text2);
 			}
 		}
