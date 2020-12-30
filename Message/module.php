@@ -83,7 +83,7 @@ class SendMessages extends IPSModule
 			If (($ausloeser == true) or ($ausloeser == 1)) {
 				EchoRemote_SetVolume($AID, $AV);
 				EchoRemote_TextToSpeech($AID, $text);
-			} else {
+			} elseif (($ausloeser == false) or ($ausloeser == 0)) {
 				EchoRemote_SetVolume($AID, $AV);
 				EchoRemote_TextToSpeech($AID, $text2);
 			}
