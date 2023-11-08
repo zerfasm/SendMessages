@@ -44,13 +44,6 @@ class SendMessages extends IPSModule
 	// Message Webfront    
         $this->RegisterPropertyBoolean('CheckPushNotification', false);
 	$this->RegisterPropertyInteger('WebfrontID', null);
-	    
-	// Message Enigma
-        $this->RegisterPropertyBoolean('CheckEnigma', false);
-	$this->RegisterPropertyInteger('EnigmaID', null);
-	
-	//Message IPS Logger
-        $this->RegisterPropertyBoolean('CheckLogger', false);
 	        
 	// Update trigger
         $this->RegisterTimer('UpdateTrigger', 0, "MESS_Update(\$_IPS['TARGET']);");
@@ -122,28 +115,6 @@ class SendMessages extends IPSModule
 			}
 		}
 		
-		//Enigma
-		$enig = $this->ReadPropertyBoolean('CheckEnigma');
-		$EID = $this->ReadPropertyInteger('EnigmaID');   
-		if ($enig == true){
-			If (($ausloeser == true) or ($ausloeser == 1)) {
-				Enigma2BY_SendMsg($EID, $text, 1, 5);
-			} elseif (($ausloeser == false) or ($ausloeser == 0)) {
-				Enigma2BY_SendMsg($EID, $text2, 1, 5);
-			}
-		}
-		
-		//IPS Logger
-		IPSUtils_Include ("IPSLogger.inc.php", "IPSLibrary::app::core::IPSLogger");
-
-		$log = $this->ReadPropertyBoolean('CheckLogger');
-		if ($log == true){
-			If (($ausloeser == true) or ($ausloeser == 1)) {
-				IPSLogger_Not($title, $text);;
-			} elseif (($ausloeser == false) or ($ausloeser == 0)) {
-				IPSLogger_Not($title, $text2);
-			}
-		}
 	} else {
 		//TTS Alexa Echo Remote Modul    
 		$tts = $this->ReadPropertyBoolean('CheckAlexa');
@@ -179,21 +150,6 @@ class SendMessages extends IPSModule
 			WFC_PushNotification($WID, $title, $text, '', 0);
 		}
 		
-		//Enigma
-		$enig = $this->ReadPropertyBoolean('CheckEnigma');
-		$EID = $this->ReadPropertyInteger('EnigmaID');    
-		
-		if ($enig == true){
-			Enigma2BY_SendMsg($EID, $text, 1, 5);
-		}
-			
-		//IPS Logger
-		IPSUtils_Include ("IPSLogger.inc.php", "IPSLibrary::app::core::IPSLogger");
-		
-		$log = $this->ReadPropertyBoolean('CheckLogger');
-		if ($log == true){
-			IPSLogger_Not($title, $text);
-		}
 	}	
     }
 }
