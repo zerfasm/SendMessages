@@ -43,19 +43,6 @@
       ]
     },
 	  
-    {"type": "ExpansionPanel", "caption": "Enigma",
-      "items": [           
-	{"type": "CheckBox", "name": "CheckEnigma", "caption": "Output by Enigma?"},    
-	{"type": "SelectInstance", "name": "EnigmaID", "caption": "Instance ID Enigma:" }
-      ]
-    },
-	  
-    {"type": "ExpansionPanel", "caption": "Logger",
-      "items": [           
-	{"type": "CheckBox", "name": "CheckLogger", "caption": "Output by Logger?"}
-      ]
-    },
-	  
     {"type": "ExpansionPanel", "caption": "Alarmanlage",
       "items": [  
 	{"type": "CheckBox", "name": "CheckAlarm", "caption": "Alarm Message?"}, 
