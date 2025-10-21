@@ -1,1 +1,17 @@
+{
+  "translations": {
+    "de": { 
+	"Title:": "Titel:",
+	"First Text:": "Erster Text (TRUE oder 1):",
+	"Second Text:": "Zweiter Text (FALSE oder 0...):",	    
+	"Message!": "Nachricht!", 
+	"Send Message!": "Nachricht verschicken!",    
+	"Volume Alexa:": "Lautstaerke Alexa:",    
+	"Output by Pushover?": "Soll die Ausgabe über Pushover erfolgen?",    
+	"Output by Telegram?": "Soll die Ausgabe über Telegram erfolgen?",  
+	"Output by Alexa?": "Soll die Ausgabe über Alexa erfolgen?",  
+	"Output by Push Notification?": "Soll die Ausgabe über Push Notification erfolgen?",  	    
+    	}
+  }
+}
 
